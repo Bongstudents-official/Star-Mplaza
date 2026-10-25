@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star M Plaza Cafe and Restaurant - Demo Website Concept</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-cream: #FDFBF7;
+            --bg-cream-card: #F4EFE6;
+            --forest-green: #1B3B2B;
+            --forest-green-dark: #12281D;
+            --gold-accent: #C5A059;
+            --gold-light: #DFC288;
+            --text-dark: #2C2C2C;
+            --text-muted: #666666;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #262626;
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Presentation Wrapper for Desktop & Mobile Mockups */
+        .mockup-container {
+            display: flex;
+            gap: 30px;
+            max-width: 1500px;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        /* Demo Website Subtle Ribbon/Label */
+        .demo-badge {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background-color: var(--gold-accent);
+            color: var(--forest-green-dark);
+            padding: 6px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        /* Common Website Styles */
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--forest-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-accent);
+            color: var(--forest-green-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1.5px solid var(--forest-green);
+            color: var(--forest-green);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--forest-green);
+            color: var(--white);
+        }
+
+        /* --- DESKTOP VIEWPORT --- */
+        .desktop-frame {
+            width: 100%;
+            max-width: 1080px;
+            background-color: var(--bg-cream);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        /* Desktop Header / Navbar */
+        header {
+            background-color: var(--bg-cream);
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--forest-green);
+            color: var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--forest-green);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        /* Desktop Hero Section */
+        .hero {
+            padding: 70px 50px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-cream-card) 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            color: var(--forest-green);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 35px;
+            max-width: 480px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 30px rgba(27, 59, 43, 0.12);
+            border: 4px solid var(--white);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold-accent);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .floating-badge i {
+            font-size: 24px;
+            color: var(--gold-accent);
+        }
+
+        .floating-badge h4 {
+            font-size: 14px;
+            color: var(--forest-green);
+        }
+
+        .floating-badge p {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Popular Food Section */
+        .section {
+            padding: 80px 50px;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gold-accent);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--forest-green);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .food-card {
+            background-color: var(--bg-cream);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transition: var(--transition);
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(27, 59, 43, 0.08);
+        }
+
+        .food-img-container {
+            height: 220px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .food-card:hover .food-img-container img {
+            transform: scale(1.05);
+        }
+
+        .food-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--forest-green);
+            color: var(--gold-light);
+            padding: 5px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .food-details {
+            padding: 25px;
+        }
+
+        .food-details h3 {
+            font-size: 20px;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+        }
+
+        .food-details p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .food-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 15px;
+        }
+
+        .cuisine-type {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Why Visit Us Section */
+        .features-section {
+            padding: 80px 50px;
+            background-color: var(--bg-cream-card);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold-accent);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(27, 59, 43, 0.05);
+            color: var(--forest-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px auto;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            background-color: var(--forest-green);
+            color: var(--gold-accent);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            color: var(--forest-green);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Restaurant Gallery Section */
+        .gallery-section {
+            padding: 80px 50px;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Visit Us / Contact Placeholder Section */
+        .visit-section {
+            padding: 80px 50px;
+            background-color: var(--bg-cream);
+            border-top: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .visit-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .visit-info h2 {
+            font-size: 32px;
+            color: var(--forest-green);
+            margin-bottom: 20px;
+        }
+
+        .visit-info p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .info-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--bg-cream);
+            color: var(--forest-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .info-content h4 {
+            font-size: 16px;
+            color: var(--forest-green);
+            margin-bottom: 4px;
+        }
+
+        .info-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .map-placeholder {
+            background-color: var(--bg-cream-card);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            border: 2px dashed rgba(197, 160, 89, 0.4);
+            color: var(--forest-green);
+        }
+
+        .map-placeholder i {
+            font-size: 48px;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        .map-placeholder h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .map-placeholder p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--forest-green-dark);
+            color: var(--white);
+            padding: 60px 50px 30px 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand p {
+            color: #AAAAAA;
+            font-size: 14px;
+            margin-top: 15px;
+            max-width: 320px;
+        }
+
+        .footer-links h4, .footer-social h4 {
+            font-size: 16px;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #CCCCCC;
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold-accent);
+            color: var(--forest-green-dark);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #888888;
+        }
+
+
+        /* --- MOBILE RESPONSIVE PREVIEW MOCKUP --- */
+        .mobile-frame {
+            width: 340px;
+            height: 700px;
+            background-color: var(--bg-cream);
+            border-radius: 36px;
+            border: 10px solid #1a1a1a;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .mobile-frame::-webkit-scrollbar {
+            width: 4px;
+        }
+        .mobile-frame::-webkit-scrollbar-thumb {
+            background: var(--gold-accent);
+            border-radius: 4px;
+        }
+
+        /* Mobile Notch / Speaker Header */
+        .mobile-notch {
+            width: 120px;
+            height: 20px;
+            background-color: #1a1a1a;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 200;
+        }
+
+        .mobile-header {
+            padding: 25px 20px 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-cream);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 150;
+        }
+
+        .mobile-logo-text {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--forest-green);
+        }
+        .mobile-logo-text span {
+            font-size: 8px;
+            letter-spacing: 1px;
+            color: var(--gold-accent);
+            display: block;
+        }
+
+        .mobile-menu-icon {
+            font-size: 16px;
+            color: var(--forest-green);
+            background: rgba(27, 59, 43, 0.08);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-hero {
+            padding: 30px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-cream-card) 100%);
+        }
+
+        .mobile-hero h1 {
+            font-size: 28px;
+            color: var(--forest-green);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .mobile-hero h1 span {
+            color: var(--gold-accent);
+        }
+
+        .mobile-hero p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .mobile-hero img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 3px solid var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .mobile-section {
+            padding: 30px 20px;
+            background-color: var(--white);
+        }
+
+        .mobile-section-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mobile-section-header span {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold-accent);
+            font-weight: 700;
+            display: block;
+        }
+
+        .mobile-section-header h2 {
+            font-size: 22px;
+            color: var(--forest-green);
+        }
+
+        .mobile-food-card {
+            background-color: var(--bg-cream);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .mobile-food-img {
+            height: 130px;
+            width: 100%;
+            position: relative;
+        }
+
+        .mobile-food-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mobile-food-content {
+            padding: 15px;
+        }
+
+        .mobile-food-content h3 {
+            font-size: 16px;
+            color: var(--forest-green);
+            margin-bottom: 6px;
+        }
+
+        .mobile-food-content p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .mobile-features {
+            padding: 30px 20px;
+            background-color: var(--bg-cream-card);
+        }
+
+        .mobile-feature-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .mobile-feature-card i {
+            font-size: 22px;
+            color: var(--forest-green);
+            margin-bottom: 10px;
+        }
+
+        .mobile-feature-card h3 {
+            font-size: 15px;
+            color: var(--forest-green);
+            margin-bottom: 6px;
+        }
+
+        .mobile-feature-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .mobile-footer {
+            background-color: var(--forest-green-dark);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .mobile-footer p {
+            font-size: 11px;
+            color: #AAAAAA;
+            margin-top: 10px;
+        }
+
+        /* Responsive Layout Switcher for Display */
+        @media (max-width: 1200px) {
+            .mockup-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Subtle Demo Concept Badge -->
+    <div class="demo-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Demo Website Concept</div>
+
+    <div class="mockup-container">
+
+        <!-- ================= DESKTOP WEBSITE MOCKUP ================= -->
+        <div class="desktop-frame">
+            
+            <!-- 1. Navigation Bar -->
+            <header>
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="logo-text">
+                        Star M Plaza
+                        <span>Cafe & Restaurant</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 13px;">Contact Us</a>
+            </header>
+
+            <!-- 2. Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Good Food. <span>Great Moments.</span></h1>
+                    <p>Discover delicious food and a welcoming dining experience at Star M Plaza Cafe and Restaurant.</p>
+                    <div class="hero-btns">
+                        <a href="#" class="btn btn-primary">Explore Our Menu <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-outline">Find Us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- Realistic High-Quality Indian Food Photography -->
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Delicious Indian Biryani and Curries Spread">
+                    <div class="floating-badge">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <div>
+                            <h4>Authentic Flavours</h4>
+                            <p>Prepared with fresh ingredients</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Popular Food Section -->
+            <section class="section">
+                <div class="section-header">
+                    <span>Culinary Delights</span>
+                    <h2>Our Popular Offerings</h2>
+                </div>
+                <div class="food-grid">
+                    <!-- Card 1 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Signature Biryani">
+                            <span class="food-tag">Signature Dish</span>
+                        </div>
+                        <div class="food-details">
+                            <h3>Aromatic Royal Biryani</h3>
+                            <p>Slow-cooked basmati rice layered with tender morsels of meat or vegetables and fragrant traditional spices.</p>
+                            <div class="food-footer">
+                                <span class="cuisine-type">Indian Main Course</span>
+                                <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Customer Favourite Curry">
+                            <span class="food-tag">Customer Favourite</span>
+                        </div>
+                        <div class="food-details">
+                            <h3>Rich Butter Masala & Naan</h3>
+                            <p>Velvety tomato-butter gravy paired perfectly with freshly baked, golden-brown butter garlic naan.</p>
+                            <div class="food-footer">
+                                <span class="cuisine-type">North Indian Classic</span>
+                                <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="food-card">
+                        <div class="food-img-container">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Freshly Prepared Snacks & Refreshments">
+                            <span class="food-tag">Freshly Prepared</span>
+                        </div>
+                        <div class="food-details">
+                            <h3>Refreshing Beverages & Snacks</h3>
+                            <p>Rejuvenating drinks, crisp appetizers, and delectable cafe bites crafted fresh for every order.</p>
+                            <div class="food-footer">
+                                <span class="cuisine-type">Cafe & Starters</span>
+                                <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Why Visit Us Section -->
+            <section class="features-section">
+                <div class="section-header">
+                    <span>The Experience</span>
+                    <h2>Why Visit Star M Plaza</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-plate-wheat"></i></div>
+                        <h3>Delicious Food</h3>
+                        <p>Expertly prepared using authentic recipes, quality spices, and fresh local produce.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <h3>Welcoming Atmosphere</h3>
+                        <p>A warm, clean, and elegant setting ideal for families, friends, and casual meetups.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3>Easy to Find</h3>
+                        <p>Conveniently located destination with accessible parking and smooth transit access.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Restaurant Gallery -->
+            <section class="gallery-section">
+                <div class="section-header">
+                    <span>Ambience & Food</span>
+                    <h2>Restaurant Gallery</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Restaurant Interior">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Dining Seating">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Plated Dish">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Tandoori Delicacy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Visit Us / Contact Placeholder Section -->
+            <section class="visit-section">
+                <div class="visit-container">
+                    <div class="visit-info">
+                        <h2>Plan Your Visit</h2>
+                        <p>We look forward to serving you. Drop by for lunch, dinner, or a relaxing cafe experience.</p>
+                        
+                        <div class="info-group">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-content">
+                               <h4>Location Placeholder</h4>
+                               <p>[Insert Street Address, City, State - PIN Code]</p>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="info-content">
+                               <h4>Opening Hours Placeholder</h4>
+                               <p>Monday – Sunday: [Insert Operating Hours, e.g., 11:00 AM – 11:00 PM]</p>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-content">
+                               <h4>Phone / Contact Placeholder</h4>
+                               <p>[Insert Phone Number or Email Address]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <h4>Interactive Map Placeholder</h4>
+                        <p>Embed your Google Map location or directions widget here for visitors.</p>
+                        <a href="#" class="btn btn-primary" style="font-size: 13px; padding: 10px 20px;">Get Directions</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo-area" style="color: white;">
+                            <div class="logo-icon" style="background-color: var(--gold-accent); color: var(--forest-green-dark);">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div class="logo-text" style="color: white;">
+                                Star M Plaza
+                                <span style="color: var(--gold-light);">Cafe & Restaurant</span>
+                            </div>
+                        </div>
+                        <p>Serving delicious moments, authentic flavors, and welcoming hospitality.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Our Menu</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social">
+                        <h4>Connect With Us</h4>
+                        <p style="font-size: 13px; color: #AAAAAA; margin-bottom: 15px;">Follow our social pages for updates and specials.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Star M Plaza Cafe and Restaurant. All rights reserved. (Demo Website Concept)</p>
+                    <p>Designed for Local Hospitality</p>
+                </div>
+            </footer>
+
+        </div>
+
+
+        <!-- ================= MOBILE RESPONSIVE PREVIEW MOCKUP ================= -->
+        <div class="mobile-frame">
+            <div class="mobile-notch"></div>
+            
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <div class="mobile-logo-text">
+                    Star M Plaza
+                    <span>Cafe & Restaurant</span>
+                </div>
+                <div class="mobile-menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Hero -->
+            <div class="mobile-hero">
+                <h1>Good Food. <span>Great Moments.</span></h1>
+                <p>Discover delicious food and a welcoming dining experience.</p>
+                <a href="#" class="btn btn-primary" style="padding: 10px 20px; font-size: 12px; width: 100%;">Explore Menu</a>
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=500&q=80" alt="Indian Food Spread">
+            </div>
+
+            <!-- Mobile Popular Food Section -->
+            <div class="mobile-section">
+                <div class="mobile-section-header">
+                    <span>Delights</span>
+                    <h2>Popular Offerings</h2>
+                </div>
+                
+                <div class="mobile-food-card">
+                    <div class="mobile-food-img">
+                        <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=400&q=80" alt="Biryani">
+                        <span class="food-tag" style="font-size: 9px; padding: 3px 8px;">Signature Dish</span>
+                    </div>
+                    <div class="mobile-food-content">
+                        <h3>Aromatic Royal Biryani</h3>
+                        <p>Slow-cooked basmati rice with traditional spices.</p>
+                        <span class="cuisine-type" style="font-size: 10px;">Indian Main Course</span>
+                    </div>
+                </div>
+
+                <div class="mobile-food-card">
+                    <div class="mobile-food-img">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=400&q=80" alt="Curry and Naan">
+                        <span class="food-tag" style="font-size: 9px; padding: 3px 8px;">Favourite</span>
+                    </div>
+                    <div class="mobile-food-content">
+                        <h3>Butter Masala & Naan</h3>
+                        <p>Velvety tomato gravy with fresh butter naan.</p>
+                        <span class="cuisine-type" style="font-size: 10px;">North Indian Classic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Features -->
+            <div class="mobile-features">
+                <div class="mobile-section-header" style="margin-bottom: 15px;">
+                    <span>Experience</span>
+                    <h2>Why Visit Us</h2>
+                </div>
+                <div class="mobile-feature-card">
+                    <i class="fa-solid fa-plate-wheat"></i>
+                    <h3>Delicious Food</h3>
+                    <p>Authentic recipes & fresh ingredients.</p>
+                </div>
+                <div class="mobile-feature-card">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h3>Welcoming Vibe</h3>
+                    <p>Clean and elegant setting for everyone.</p>
+                </div>
+            </div>
+
+            <!-- Mobile Footer -->
+            <div class="mobile-footer">
+                <div class="logo-text" style="color: white; font-size: 13px; margin-bottom: 6px;">
+                    Star M Plaza
+                    <span style="color: var(--gold-light);">Cafe & Restaurant</span>
+                </div>
+                <p>&copy; 2026 Star M Plaza. Demo Concept.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

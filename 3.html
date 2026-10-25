@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star M Plaza Cafe and Restaurant | Belari, West Bengal</title>
+    <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, and Noto Sans Bengali -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-cream: #FDFBF7;
+            --bg-cream-card: #F4EFE6;
+            --forest-green: #1B3B2B;
+            --forest-green-dark: #12281D;
+            --gold-accent: #C5A059;
+            --gold-light: #DFC288;
+            --text-dark: #2C2C2C;
+            --text-muted: #666666;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Bengali', 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .demo-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--gold-accent);
+            color: var(--forest-green-dark);
+            padding: 8px 18px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', 'Noto Sans Bengali', serif;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 26px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--forest-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-accent);
+            color: var(--forest-green-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1.5px solid var(--forest-green);
+            color: var(--forest-green);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--forest-green);
+            color: var(--white);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1EBE5D;
+            color: white;
+        }
+
+        .lang-switch {
+            background: var(--bg-cream-card);
+            border: 1px solid var(--gold-accent);
+            color: var(--forest-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .lang-switch:hover {
+            background: var(--forest-green);
+            color: var(--white);
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--bg-cream);
+            padding: 14px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Actual Restaurant Logo Image Styling */
+        .brand-logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: var(--forest-green);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-cream-card) 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: var(--forest-green);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 30px rgba(27, 59, 43, 0.12);
+            border: 4px solid var(--white);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold-accent);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .floating-badge i {
+            font-size: 24px;
+            color: var(--gold-accent);
+        }
+
+        .floating-badge h4 {
+            font-size: 14px;
+            color: var(--forest-green);
+        }
+
+        .floating-badge p {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Generic Sections */
+        .section {
+            padding: 90px 5%;
+            background-color: var(--white);
+        }
+
+        .section-alt {
+            background-color: var(--bg-cream-card);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 55px auto;
+        }
+
+        .section-header span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gold-accent);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--forest-green);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* Menu Section */
+        .menu-filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--forest-green);
+            color: var(--white);
+            border-color: var(--forest-green);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item-card {
+            background-color: var(--bg-cream);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .menu-item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(27, 59, 43, 0.08);
+        }
+
+        .menu-item-img {
+            height: 200px;
+            width: 100%;
+            position: relative;
+        }
+
+        .menu-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--forest-green);
+            color: var(--gold-light);
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+
+        .menu-item-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .menu-item-header h3 {
+            font-size: 18px;
+            color: var(--forest-green);
+        }
+
+        .menu-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gold-accent);
+        }
+
+        .menu-item-content p {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .menu-item-footer {
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Facilities Section */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+        }
+
+        .facility-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-img {
+            height: 230px;
+            width: 100%;
+            position: relative;
+        }
+
+        .facility-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .facility-tag {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(27, 59, 43, 0.85);
+            backdrop-filter: blur(4px);
+            color: var(--gold-light);
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .facility-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .facility-body h3 {
+            font-size: 22px;
+            color: var(--forest-green);
+            margin-bottom: 12px;
+        }
+
+        .facility-body p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .facility-features-list {
+            list-style: none;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .facility-features-list li {
+            font-size: 13px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .facility-features-list li i {
+            color: var(--gold-accent);
+            font-size: 12px;
+        }
+
+        .facility-footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 40px;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 24px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-card-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon-box {
+            width: 48px;
+            height: 48px;
+            background-color: var(--bg-cream);
+            color: var(--forest-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .contact-text-box h4 {
+            font-size: 16px;
+            color: var(--forest-green);
+            margin-bottom: 4px;
+        }
+
+        .contact-text-box p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .action-buttons-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .map-box {
+            background-color: var(--bg-cream-card);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            border: 2px dashed rgba(197, 160, 89, 0.4);
+            color: var(--forest-green);
+        }
+
+        .map-box i {
+            font-size: 50px;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        .map-box h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .map-box p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--forest-green-dark);
+            color: var(--white);
+            padding: 70px 5% 30px 5%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand p {
+            color: #AAAAAA;
+            font-size: 14px;
+            margin-top: 15px;
+            max-width: 320px;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            font-size: 16px;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #CCCCCC;
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-contact p {
+            font-size: 13px;
+            color: #CCCCCC;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #888888;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .hero-content p {
+                margin: 0 auto 35px auto;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-cream);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-key="demoBadge">ডেমো ওয়েবসাইট কনসেপ্ট</span></div>
+
+    <!-- Header & Navigation with Actual Restaurant Logo Image -->
+    <header>
+        <a href="#" class="logo-area">
+            <!-- Replace 'logo.png' with your actual uploaded logo image file name -->
+            <img src="logo.png" alt="Star MPlaza Logo" class="brand-logo-img">
+        </a>
+        <nav>
+            <ul id="navLinks">
+                <li><a href="#home" class="active" data-key="navHome">হোম</a></li>
+                <li><a href="#menu" data-key="navMenu">মেনু</a></li>
+                <li><a href="#facilities" data-key="navFacilities">অন্যান্য সুবিধাসমূহ</a></li>
+                <li><a href="#gallery" data-key="navGallery">গ্যালারি</a></li>
+                <li><a href="#about" data-key="navAbout">আমাদের সম্পর্কে</a></li>
+                <li><a href="#contact" data-key="navContact">যোগাযোগ</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <button class="lang-switch" id="langSwitchBtn" onclick="toggleLanguage()">English</button>
+            <a href="tel:9748031413" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px;"><i class="fa-solid fa-phone"></i> <span data-key="callNowBtn">কল করুন</span></a>
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-key="heroTitle">ভালো খাবার। <span>দারুণ মুহূর্ত।</span></h1>
+            <p data-key="heroDesc">বেলারী, পশ্চিমবঙ্গে স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁয় আপনাকে স্বাগতম। এখানে উপভোগ করুন সুস্বাদু মরসুমি বিরিয়ানি, অথেন্টিক চাইনিজ পদ, তন্দুরি আইটেম এবং রিফ্রেশিং পানীয়।</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary"><span data-key="exploreMenuBtn">আমাদের মেনু দেখুন</span> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="tel:9748031413" class="btn btn-outline"><i class="fa-solid fa-phone"></i> <span data-key="callDetailsBtn">বিস্তারিত জানতে কল করুন</span></a>
+                <a href="https://wa.me/919748031413" target="_blank" class="btn whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> <span data-key="whatsappBtn">হোয়াটসঅ্যাপে চ্যাট করুন</span></a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Indian Food Spread">
+            <div class="floating-badge">
+                <i class="fa-solid fa-bowl-food"></i>
+                <div>
+                    <h4 data-key="badgeTitle">অথেন্টিক স্বাদ</h4>
+                    <p data-key="badgeSub">বিরিয়ানি, তন্দুরি ও চাইনিজ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="section-header">
+            <span data-key="menuSubHeader">সুস্বাদু খাবার</span>
+            <h2 data-key="menuHeader">আমাদের রেস্তোরাঁর মেনু</h2>
+            <p data-key="menuDesc">পরিবেশন করা হয় টাটকা উপাদান ও ঐতিহ্যবাহী মশলা দিয়ে প্রস্তুত করা সুস্বাদু সব খাবার।</p>
+        </div>
+
+        <div class="menu-filter-tabs">
+            <button class="filter-btn active" onclick="filterMenu('all', this)" data-key="filterAll">সকল পদ</button>
+            <button class="filter-btn" onclick="filterMenu('biryani', this)" data-key="filterBiryani">বিরিয়ানি ও ভাত</button>
+            <button class="filter-btn" onclick="filterMenu('chinese', this)" data-key="filterChinese">চাইনিজ পদ</button>
+            <button class="filter-btn" onclick="filterMenu('tandoori', this)" data-key="filterTandoori">তন্দুর ও স্টার্টার</button>
+            <button class="filter-btn" onclick="filterMenu('beverages', this)" data-key="filterBeverages">কফি ও মকটেল</button>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-item-card" data-category="biryani">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=600&q=80" alt="Royal Dum Biryani">
+                    <span class="menu-badge" data-key="tagSignature">সিগনেচার</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 data-key="item1Title">রয়্যাল দম বিরিয়ানি</h3>
+                        <span class="menu-price">[দাম]</span>
+                    </div>
+                    <p data-key="item1Desc">দীর্ঘ দানার সুগন্ধযুক্ত বাসমতি চালে তৈরি নরম মাংস বা সবজির সুস্বাদু দম বিরিয়ানি।</p>
+                    <div class="menu-item-footer">
+                        <span data-key="item1Cat">বিরিয়ানি ও ভাত</span>
+                        <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item-card" data-category="chinese">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" alt="Chinese Wok">
+                    <span class="menu-badge" data-key="tagPopular">জনপ্রিয়</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 data-key="item2Title">চাইনিজ ডেলিক্যাসি</h3>
+                        <span class="menu-price">[দাম]</span>
+                    </div>
+                    <p data-key="item2Desc">হাক্কা নুডলস, ফ্রাইড রাইস এবং সুস্বাদু মাঞ্চুরিয়ান তাজা শাকসবজি ও সস দিয়ে তৈরি।</p>
+                    <div class="menu-item-footer">
+                        <span data-key="item2Cat">চাইনিজ ক্যুইজিন</span>
+                        <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item-card" data-category="tandoori">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Tandoori Platters">
+                    <span class="menu-badge" data-key="tagChef">শেফ স্পেশাল</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 data-key="item3Title">স্মোকি তন্দুরি প্লাটার</h3>
+                        <span class="menu-price">[দাম]</span>
+                    </div>
+                    <p data-key="item3Desc">টক দই ও মশলায় ম্যারিনেট করা এবং আমাদের ঐতিহ্যবাহী মাটির ওভেনে নিখুঁতভাবে পোড়ানো।</p>
+                    <div class="menu-item-footer">
+                        <span data-key="item3Cat">তন্দুর ও স্টার্টার</span>
+                        <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item-card" data-category="beverages">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Beverages">
+                    <span class="menu-badge" data-key="tagFresh">রিফ্রেশিং</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 data-key="item4Title">কফি ও মকটেল</h3>
+                        <span class="menu-price">[দাম]</span>
+                    </div>
+                    <p data-key="item4Desc">মনোরম ঠান্ডা পানীয়, ফলের জুস এবং সদ্য প্রস্তুত করা সুগন্ধযুক্ত কফি।</p>
+                    <div class="menu-item-footer">
+                        <span data-key="item4Cat">ক্যাফে ও পানীয়</span>
+                        <i class="fa-solid fa-heart" style="color: var(--gold-accent);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 45px;">
+            <a href="tel:9748031413" class="btn btn-outline"><i class="fa-solid fa-phone"></i> <span data-key="menuCallBtn">আজকের স্পেশাল ও দাম জানতে কল করুন</span></a>
+        </div>
+    </section>
+
+    <!-- Other Business Facilities Section -->
+    <section id="facilities" class="section section-alt">
+        <div class="section-header">
+            <span data-key="facSubHeader">সম্পূর্ণ আতিথেয়তা</span>
+            <h2 data-key="facHeader">আমাদের অন্যান্য সুবিধাসমূহ</h2>
+            <p data-key="facDesc">রেস্তোরাঁর পাশাপাশি স্টার এম প্লাজা উদযাপন, আরামদায়ক থাকা এবং পরিবারের বিনোদনের জন্য বিশেষ ব্যবস্থা প্রদান করে।</p>
+        </div>
+
+        <div class="facilities-grid">
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Marriage Hall">
+                    <span class="facility-tag"><i class="fa-solid fa-champagne-glasses"></i> <span data-key="hallTag">ম্যারেজ হল</span></span>
+                </div>
+                <div class="facility-body">
+                    <h3 data-key="hallTitle">বিলাসবহুল ম্যারেজ হল</h3>
+                    <p data-key="hallDesc">বিয়ে, রিসেপশন, অন্নপ্রাশন এবং বিভিন্ন সামাজিক অনুষ্ঠান আয়োজনের জন্য প্রশস্ত ও সুন্দর হলঘর।</p>
+                    <ul class="facility-features-list">
+                        <li><i class="fa-solid fa-check"></i> <span data-key="hallFeat1">প্রশস্ত ব্যাসকেট ও আসন বিন্যাস</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="hallFeat2">বিয়ে ও পারিবারিক অনুষ্ঠানের জন্য আদর্শ</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="hallFeat3">পর্যাপ্ত বসার ও স্টেজের ব্যবস্থা</span></li>
+                    </ul>
+                    <div class="facility-footer">
+                        <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;" data-key="hallCheck">তারিখের জন্য যোগাযোগ করুন</span>
+                        <a href="tel:9748031413" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px;"><i class="fa-solid fa-phone"></i> <span data-key="checkAvailBtn">উপলব্ধতা জানতে কল করুন</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Guest House">
+                    <span class="facility-tag"><i class="fa-solid fa-hotel"></i> <span data-key="stayTag">গেস্ট হাউস</span></span>
+                </div>
+                <div class="facility-body">
+                    <h3 data-key="stayTitle">আরামদায়ক গেস্ট হাউস</h3>
+                    <p data-key="stayDesc">যাত্রী, আমন্ত্রিত অতিথি এবং পর্যটকদের রাত্রিবাসের জন্য পরিষ্কার ও পরিচ্ছন্ন থাকার ঘর।</p>
+                    <ul class="facility-features-list">
+                        <li><i class="fa-solid fa-check"></i> <span data-key="stayFeat1">পরিষ্কার ও আরামদায়ক রুম</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="stayFeat2">বেলারীতে সুবিধাজনক অবস্থান</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="stayFeat3">শান্তিপূর্ণ পরিবেশ</span></li>
+                    </ul>
+                    <div class="facility-footer">
+                        <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;" data-key="stayCheck">রুমের তথ্য</span>
+                        <a href="tel:9748031413" class="btn btn-primary" style="padding: 9px 16px; font-size: 13px;"><i class="fa-solid fa-phone"></i> <span data-key="detailsBtn">বিস্তারিত জানুন</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-img">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80" alt="Children Park">
+                    <span class="facility-tag"><i class="fa-solid fa-child-reaching"></i> <span data-key="parkTag">চিলড্রেন পার্ক</span></span>
+                </div>
+                <div class="facility-body">
+                    <h3 data-key="parkTitle">বাচ্চাদের খেলার পার্ক</h3>
+                    <p data-key="parkDesc">পরিবারের সাথে খাবার খাওয়ার পাশাপাশি শিশুদের আনন্দ ও খেলাধুলার জন্য একটি নিরাপদ সবুজ পার্ক।</p>
+                    <ul class="facility-features-list">
+                        <li><i class="fa-solid fa-check"></i> <span data-key="parkFeat1">নিরাপদ খেলার পরিবেশ</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="parkFeat2">শিশুদের জন্য বিনোদনমূলক জোন</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span data-key="parkFeat3">পরিবারবান্ধব পরিবেশ</span></li>
+                    </ul>
+                    <div class="facility-footer">
+                        <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;" data-key="parkCheck">খোলার সময়</span>
+                        <a href="tel:9748031413" class="btn btn-outline" style="padding: 9px 16px; font-size: 13px;"><i class="fa-solid fa-phone"></i> <span data-key="timeBtn">সময় জানতে কল করুন</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="section-header">
+            <span data-key="galSubHeader">ভিজ্যুয়াল ট্যুর</span>
+            <h2 data-key="galHeader">রেস্তোরাঁ ও পরিবেশের গ্যালারি</h2>
+            <p data-key="galDesc">আমাদের ডাইনিং এরিয়া, পানীয় এবং সামগ্রিক পরিবেশের কিছু ঝলক।</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Cafe Interior">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Dining Seating">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=80" alt="Plated Dish">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80" alt="Premises View">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="section-header">
+            <span data-key="aboutSubHeader">আমাদের গল্প</span>
+            <h2 data-key="aboutHeader">স্টার এম প্লাজা সম্পর্কে</h2>
+            <p data-key="aboutSub">সুস্বাদু খাবার, আন্তরিক আতিথেয়তা এবং বহুমুখী ইভেন্ট স্পেসের মাধ্যমে আমরা আমাদের গ্রাহকদের সেবা প্রদান করছি।</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 16px;">
+            <p style="margin-bottom: 20px;" data-key="aboutText1">স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁ পশ্চিমবঙ্গের বোলারীতে অবস্থিত একটি প্রধান স্থানীয় প্রতিষ্ঠান। আমরা সুস্বাদু চাইনিজ, বিরিয়ানি, তন্দুরি খাবার এবং রিফ্রেশিং মকটেল পরিবেশন করতে পেরে গর্বিত।</p>
+            <p data-key="aboutText2">আমাদের ক্যাফে এবং রেস্তোরাঁ ছাড়াও, আমরা উদযাপন অনুষ্ঠানের জন্য একটি প্রশস্ত ম্যারেজ হল, অতিথিদের জন্য একটি আরামদায়ক গেস্ট হাউস এবং শিশুদের জন্য একটি চমৎকার পার্কের মতো সম্পূর্ণ আতিথেয়তা সেবা প্রদান করি।</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <span data-key="contactSubHeader">যোগাযোগ করুন</span>
+            <h2 data-key="contactHeader">আমাদের সাথে দেখা করুন বা যোগাযোগ করুন</h2>
+            <p data-key="contactDesc">আমাদের মেনু, ম্যারেজ হল বুকিং বা গেস্ট হাউস সম্পর্কে কোনো প্রশ্ন আছে? সরাসরি আমাদের সাথে যোগাযোগ করুন।</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Star M Plaza</h2>
+                <p data-key="bizSubtitle">ক্যাফে, রেস্তোরাঁ, ম্যারেজ হল, গেস্ট হাউস এবং চিলড্রেন পার্ক</p>
+                
+                <div class="contact-card-item">
+                    <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text-box">
+                        <h4 data-key="addrLabel">ঠিকানা</h4>
+                        <p data-key="addrText">বেলারী, পশ্চিমবঙ্গ [পিন কোড / ল্যান্ডমার্ক]</p>
+                    </div>
+                </div>
+
+                <div class="contact-card-item">
+                    <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text-box">
+                        <h4 data-key="phoneLabel">ফোন নম্বর</h4>
+                        <p>+91 97480 31413</p>
+                    </div>
+                </div>
+
+                <div class="contact-card-item">
+                    <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+                    <div class="contact-text-box">
+                        <h4 data-key="hoursLabel">খোলার সময়</h4>
+                        <p data-key="hoursText">সোমবার – রবিবার: সকাল ১১:০০ – রাত ১১:০০</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons-group">
+                    <a href="tel:9748031413" class="btn btn-primary"><i class="fa-solid fa-phone"></i> <span data-key="callDetailsBtn">বিস্তারিত জানতে কল করুন</span></a>
+                    <a href="https://wa.me/919748031413" target="_blank" class="btn whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> <span data-key="whatsappBtn">হোয়াটসঅ্যাপে যোগাযোগ করুন</span></a>
+                    <a href="https://maps.google.com/?q=Star+M+Plaza+Belari" target="_blank" class="btn btn-outline"><i class="fa-solid fa-map-location-dot"></i> <span data-key="dirBtn">দিকনির্দেশ পান</span></a>
+                </div>
+            </div>
+
+            <div class="map-box">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h4 data-key="mapTitle">বেলারীতে আমাদের খুঁজুন</h4>
+                <p data-key="mapDesc">স্টার এম প্লাজার সঠিক দিকনির্দেশ পেতে গুগল ম্যাপ খুলুন।</p>
+                <a href="https://maps.google.com/?q=Star+M+Plaza+Belari" target="_blank" class="btn btn-primary" style="font-size: 13px; padding: 11px 22px;" data-key="mapBtn">গুগল ম্যাপ খুলুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-area" style="margin-bottom: 12px;">
+                    <img src="logo.png" alt="Star M Plaza Logo" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+                </div>
+                <p data-key="footerBrandDesc">পশ্চিমবঙ্গের বোলারীতে চাইনিজ, বিরিয়ানি, তন্দুরি, মকটেল, ম্যারেজ হল, গেস্ট হাউস এবং চিলড্রেন পার্ক পরিষেবা প্রদান করা হচ্ছে।</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-key="footerLinksHeader">দ্রুত লিংক</h4>
+                <ul>
+                    <li><a href="#home" data-key="navHome">হোম</a></li>
+                    <li><a href="#menu" data-key="footerMenu">রেস্তোরাঁর মেনু</a></li>
+                    <li><a href="#facilities" data-key="navFacilities">অন্যান্য সুবিধাসমূহ</a></li>
+                    <li><a href="#gallery" data-key="navGallery">গ্যালারি</a></li>
+                    <li><a href="#contact" data-key="navContact">যোগাযোগ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 data-key="footerContactHeader">সরাসরি যোগাযোগ</h4>
+                <p><i class="fa-solid fa-phone" style="color: var(--gold-accent);"></i> +91 97480 31413</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--gold-accent);"></i> <span data-key="footerLoc">বেলারী, পশ্চিমবঙ্গ</span></p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <a href="tel:9748031413" class="btn btn-primary" style="padding: 8px 14px; font-size: 12px;"><i class="fa-solid fa-phone"></i> <span data-key="callNowBtn">কল করুন</span></a>
+                    <a href="https://wa.me/919748031413" target="_blank" class="btn whatsapp-btn" style="padding: 8px 14px; font-size: 12px;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-key="copyText">&copy; ২০২৬ স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁ (বেলারী, ডব্লিউবি)। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p data-key="footerDesign">স্থানীয় আতিথেয়তার জন্য ডিজাইন করা হয়েছে</p>
+        </div>
+    </footer>
+
+    <!-- Translation and Interactivity Script -->
+    <script>
+        const translations = {
+            bn: {
+                demoBadge: "ডেমো ওয়েবসাইট কনসেপ্ট",
+                navHome: "হোম",
+                navMenu: "মেনু",
+                navFacilities: "অন্যান্য সুবিধাসমূহ",
+                navGallery: "গ্যালারি",
+                navAbout: "আমাদের সম্পর্কে",
+                navContact: "যোগাযোগ",
+                callNowBtn: "কল করুন",
+                heroTitle: "ভালো খাবার। <span>দারুণ মুহূর্ত।</span>",
+                heroDesc: "বেলারী, পশ্চিমবঙ্গে স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁয় আপনাকে স্বাগতম। এখানে উপভোগ করুন সুস্বাদু মরসুমি বিরিয়ানি, অথেন্টিক চাইনিজ পদ, তন্দুরি আইটেম এবং রিফ্রেশিং পানীয়।",
+                exploreMenuBtn: "আমাদের মেনু দেখুন",
+                callDetailsBtn: "বিস্তারিত জানতে কল করুন",
+                whatsappBtn: "হোয়াটসঅ্যাপে চ্যাট করুন",
+                badgeTitle: "অথেন্টিক স্বাদ",
+                badgeSub: "বিরিয়ানি, তন্দুরি ও চাইনিজ",
+                menuSubHeader: "সুস্বাদু খাবার",
+                menuHeader: "আমাদের রেস্তোরাঁর মেনু",
+                menuDesc: "পরিবেশন করা হয় টাটকা উপাদান ও ঐতিহ্যবাহী মশলা দিয়ে প্রস্তুত করা সুস্বাদু সব খাবার।",
+                filterAll: "সকল পদ",
+                filterBiryani: "বিরিয়ানি ও ভাত",
+                filterChinese: "চাইনিজ পদ",
+                filterTandoori: "তন্দুর ও স্টার্টার",
+                filterBeverages: "কফি ও মকটেল",
+                tagSignature: "সিগনেচার",
+                tagPopular: "জনপ্রিয়",
+                tagChef: "শেফ স্পেশাল",
+                tagFresh: "রিফ্রেশিং",
+                item1Title: "রয়্যাল দম বিরিয়ানি",
+                item1Desc: "দীর্ঘ দানার সুগন্ধযুক্ত বাসমতি চালে তৈরি নরম মাংস বা সবজির সুস্বাদু দম বিরিয়ানি.",
+                item1Cat: "বিরিয়ানি ও ভাত",
+                item2Title: "চাইনিজ ডেলিক্যাসি",
+                item2Desc: "হাক্কা নুডলস, ফ্রাইড রাইস এবং সুস্বাদু মাঞ্চুরিয়ান তাজা শাকসবজি ও সস দিয়ে তৈরি.",
+                item2Cat: "চাইনিজ ক্যুইজিন",
+                item3Title: "স্মোকি তন্দুরি প্লাটার",
+                item3Desc: "টক দই ও মশলায় ম্যারিনেট করা এবং আমাদের ঐতিহ্যবাহী মাটির ওভেনে নিখুঁতভাবে পোড়ানো.",
+                item3Cat: "তন্দুর ও স্টার্টার",
+                item4Title: "কফি ও মকটেল",
+                item4Desc: "মনোরম ঠান্ডা পানীয়, ফলের জুস এবং সদ্য প্রস্তুত করা সুগন্ধযুক্ত কফি.",
+                item4Cat: "ক্যাফে ও পানীয়",
+                menuCallBtn: "আজকের স্পেশাল ও দাম জানতে কল করুন",
+                facSubHeader: "সম্পূর্ণ আতিথেয়তা",
+                facHeader: "আমাদের অন্যান্য সুবিধাসমূহ",
+                facDesc: "রেস্তোরাঁর পাশাপাশি স্টার এম প্লাজা উদযাপন, আরামদায়ক থাকা এবং পরিবারের বিনোদনের জন্য বিশেষ ব্যবস্থা প্রদান করে।",
+                hallTag: "ম্যারেজ হল",
+                hallTitle: "বিলাসবহুল ম্যারেজ হল",
+                hallDesc: "বিয়ে, রিসেপশন, অন্নপ্রাশন এবং বিভিন্ন সামাজিক অনুষ্ঠান আয়োজনের জন্য প্রশস্ত ও সুন্দর হলঘর।",
+                hallFeat1: "প্রশস্ত ব্যাসকেট ও আসন বিন্যাস",
+                hallFeat2: "বিয়ে ও পারিবারিক অনুষ্ঠানের জন্য আদর্শ",
+                hallFeat3: "পর্যাপ্ত বসার ও স্টেজের ব্যবস্থা",
+                hallCheck: "তারিখের জন্য যোগাযোগ করুন",
+                checkAvailBtn: "উপলব্ধতা জানতে কল করুন",
+                stayTag: "গেস্ট হাউস",
+                stayTitle: "আরামদায়ক গেস্ট হাউস",
+                stayDesc: "যাত্রী, আমন্ত্রিত অতিথি এবং পর্যটকদের রাত্রিবাসের জন্য পরিষ্কার ও পরিচ্ছন্ন থাকার ঘর।",
+                stayFeat1: "পরিষ্কার ও আরামদায়ক রুম",
+                stayFeat2: "বেলারীতে সুবিধাজনক অবস্থান",
+                stayFeat3: "শান্তিপূর্ণ পরিবেশ",
+                stayCheck: "রুমের তথ্য",
+                detailsBtn: "বিস্তারিত জানুন",
+                parkTag: "চিলড্রেন পার্ক",
+                parkTitle: "বাচ্চাদের খেলার পার্ক",
+                parkDesc: "পরিবারের সাথে খাবার খাওয়ার পাশাপাশি শিশুদের আনন্দ ও খেলাধুলার জন্য একটি নিরাপদ সবুজ পার্ক।",
+                parkFeat1: "নিরাপদ খেলার পরিবেশ",
+                parkFeat2: "শিশুদের জন্য বিনোদনমূলক জোন",
+                parkFeat3: "পরিবারবান্ধব পরিবেশ",
+                parkCheck: "খোলার সময়",
+                timeBtn: "সময় জানতে কল করুন",
+                galSubHeader: "ভিজ্যুয়াল ট্যুর",
+                galHeader: "রেস্তোরাঁ ও পরিবেশের গ্যালারি",
+                galDesc: "আমাদের ডাইনিং এরিয়া, পানীয় এবং সামগ্রিক পরিবেশের কিছু ঝলক।",
+                aboutSubHeader: "আমাদের গল্প",
+                aboutHeader: "স্টার এম প্লাজা সম্পর্কে",
+                aboutSub: "সুস্বাদু খাবার, আন্তরিক আতিথেয়তা এবং বহুমুখী ইভেন্ট স্পেসের মাধ্যমে আমরা আমাদের গ্রাহকদের সেবা প্রদান করছি।",
+                aboutText1: "স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁ পশ্চিমবঙ্গের বোলারীতে অবস্থিত একটি প্রধান স্থানীয় প্রতিষ্ঠান। আমরা সুস্বাদু চাইনিজ, বিরিয়ানি, তন্দুরি খাবার এবং রিফ্রেশিং মকটেল পরিবেশন করতে পেরে গর্বিত।",
+                aboutText2: "আমাদের ক্যাফে এবং রেস্তোরাঁ ছাড়াও, আমরা উদযাপন অনুষ্ঠানের জন্য একটি প্রশস্ত ম্যারেজ হল, অতিথিদের জন্য একটি আরামদায়ক গেস্ট হাউস এবং শিশুদের জন্য একটি চমৎকার পার্কের মতো সম্পূর্ণ আতিথেয়তা সেবা প্রদান করি।",
+                contactSubHeader: "যোগাযোগ করুন",
+                contactHeader: "আমাদের সাথে দেখা করুন বা যোগাযোগ করুন",
+                contactDesc: "আমাদের মেনু, ম্যারেজ হল বুকিং বা গেস্ট হাউস সম্পর্কে কোনো প্রশ্ন আছে? সরাসরি আমাদের সাথে যোগাযোগ করুন।",
+                bizSubtitle: "ক্যাফে, রেস্তোরাঁ, ম্যারেজ হল, গেস্ট হাউস এবং চিলড্রেন পার্ক",
+                addrLabel: "ঠিকানা",
+                addrText: "বেলারী, পশ্চিমবঙ্গ [পিন কোড / ল্যান্ডমার্ক]",
+                phoneLabel: "ফোন নম্বর",
+                hoursLabel: "খোলার সময়",
+                hoursText: "সোমবার – রবিবার: সকাল ১১:০০ – রাত ১১:০০",
+                dirBtn: "দিকনির্দেশ পান",
+                mapTitle: "বেলারীতে আমাদের খুঁজুন",
+                mapDesc: "স্টার এম প্লাজার সঠিক দিকনির্দেশ পেতে গুগল ম্যাপ খুলুন।",
+                mapBtn: "গুগল ম্যাপ খুলুন",
+                footerBrandDesc: "পশ্চিমবঙ্গের বোলারীতে চাইনিজ, বিরিয়ানি, তন্দুরি, মকটেল, ম্যারেজ হল, গেস্ট হাউস এবং চিলড্রেন পার্ক পরিষেবা প্রদান করা হচ্ছে।",
+                footerLinksHeader: "দ্রুত লিংক",
+                footerMenu: "রেস্তোরাঁর মেনু",
+                footerContactHeader: "সরাসরি যোগাযোগ",
+                footerLoc: "বেলারী, পশ্চিমবঙ্গ",
+                copyText: "&copy; ২০২৬ স্টার এম প্লাজা ক্যাফে এবং রেস্তোরাঁ (বেলারী, ডব্লিউবি)। সর্বস্বত্ব সংরক্ষিত।",
+                footerDesign: "স্থানীয় আতিথেয়তার জন্য ডিজাইন করা হয়েছে"
+            },
+            en: {
+                demoBadge: "Demo Website Concept",
+                navHome: "Home",
+                navMenu: "Menu",
+                navFacilities: "Other Facilities",
+                navGallery: "Gallery",
+                navAbout: "About",
+                navContact: "Contact",
+                callNowBtn: "Call Now",
+                heroTitle: "Good Food. <span>Great Moments.</span>",
+                heroDesc: "Welcome to Star M Plaza Cafe and Restaurant in Belari, West Bengal. Enjoy delicious aromatic biryanis, authentic Chinese delicacies, tandoori grills, and refreshing beverages in a welcoming ambience.",
+                exploreMenuBtn: "Explore Our Menu",
+                callDetailsBtn: "Call for Details",
+                whatsappBtn: "Chat on WhatsApp",
+                badgeTitle: "Authentic Flavours",
+                badgeSub: "Biryani, Tandoori & Chinese",
+                menuSubHeader: "Culinary Masterpieces",
+                menuHeader: "Our Restaurant Menu",
+                menuDesc: "Browse through our selection of freshly prepared dishes, crafted with quality ingredients and traditional spices.",
+                filterAll: "All Specialities",
+                filterBiryani: "Biryani & Rice",
+                filterChinese: "Chinese Cuisine",
+                filterTandoori: "Tandoor & Starters",
+                filterBeverages: "Coffee & Mocktails",
+                tagSignature: "Signature",
+                tagPopular: "Popular",
+                tagChef: "Chef Special",
+                tagFresh: "Refreshing",
+                item1Title: "Royal Dum Biryani",
+                item1Desc: "Slow-cooked long-grain basmati rice layered with tender meat or vegetables, infused with aromatic whole spices.",
+                item1Cat: "Biryani & Rice",
+                item2Title: "Wok Tossed Chinese Delicacies",
+                item2Desc: "Hakka noodles, fried rice, and savory Manchurian tossed in high-heat woks with fresh bell peppers and sauces.",
+                item2Cat: "Chinese Cuisine",
+                item3Title: "Smoky Tandoori Platters",
+                item3Desc: "Marinated in rich yogurt and spices, charred to perfection inside our traditional clay oven.",
+                item3Cat: "Tandoor & Starters",
+                item4Title: "Coffee & Refreshing Mocktails",
+                item4Desc: "Rejuvenating cold beverages, vibrant fruit mocktails, and freshly brewed aromatic coffee.",
+                item4Cat: "Cafe & Drinks",
+                menuCallBtn: "Call to Check Today's Specials & Prices",
+                facSubHeader: "Complete Hospitality",
+                facHeader: "Explore Our Other Facilities",
+                facDesc: "Alongside our dining experience, Star M Plaza offers dedicated spaces for events, comfortable overnight stays, and family leisure.",
+                hallTag: "Marriage Hall",
+                hallTitle: "Grand Celebration Hall",
+                hallDesc: "A spacious and elegant venue designed to host weddings, receptions, anniversaries, and social gatherings with comfort.",
+                hallFeat1: "Spacious banquet hall layout",
+                hallFeat2: "Ideal for weddings & family events",
+                hallFeat3: "Ample seating and staging area",
+                hallCheck: "Enquire for Dates",
+                checkAvailBtn: "Call to Check Availability",
+                stayTag: "Guest House",
+                stayTitle: "Comfortable Guest Rooms",
+                stayDesc: "Well-maintained, clean, and restful lodging rooms available for travelers, wedding guests, and visitors looking for peaceful stays.",
+                stayFeat1: "Clean, comfortable stay options",
+                stayFeat2: "Convenient location in Belari",
+                stayFeat3: "Peaceful environment",
+                stayCheck: "Room Enquiries",
+                detailsBtn: "Call for Details",
+                parkTag: "Children's Park",
+                parkTitle: "Joyful Play Area",
+                parkDesc: "A safe, green, and engaging outdoor space designed for kids to play and enjoy while families dine and relax at the plaza.",
+                parkFeat1: "Safe outdoor play environment",
+                parkFeat2: "Fun recreational space for kids",
+                parkFeat3: "Family-friendly atmosphere",
+                parkCheck: "Visiting Hours",
+                timeBtn: "Call for Timings",
+                galSubHeader: "Visual Tour",
+                galHeader: "Restaurant & Ambience Gallery",
+                galDesc: "Take a glimpse of our dining areas, refreshing beverages, and overall premises.",
+                aboutSubHeader: "Our Story",
+                aboutHeader: "About Star M Plaza",
+                aboutSub: "Serving our community with great food, warm hospitality, and versatile event spaces.",
+                aboutText1: "Star M Plaza Cafe and Restaurant is a prominent local destination located in Belari, West Bengal. We take pride in offering delicious Chinese, Biryani, Tandoori dishes, and refreshing mocktails in a welcoming setting.",
+                aboutText2: "Beyond our cafe and restaurant, we provide comprehensive hospitality services including a spacious marriage hall for celebrations, a comfortable guest house for travelers, and a delightful children's park for families.",
+                contactSubHeader: "Get in Touch",
+                contactHeader: "Visit Or Contact Us",
+                contactDesc: "Have questions about our menu, marriage hall booking, or guest house stay? Reach out to us directly.",
+                bizSubtitle: "Cafe, Restaurant, Marriage Hall, Guest House & Children's Park",
+                addrLabel: "Location Address",
+                addrText: "Belari, West Bengal [Insert Exact PIN / Landmark]",
+                phoneLabel: "Phone Number",
+                hoursLabel: "Opening Hours",
+                hoursText: "Monday – Sunday: 11:00 AM – 11:00 PM",
+                dirBtn: "Get Directions",
+                mapTitle: "Find Us in Belari",
+                mapDesc: "Click below to open Google Maps for instant directions to Star M Plaza.",
+                mapBtn: "Open Google Maps",
+                footerBrandDesc: "Serving Chinese, Biryani, Tandoori, Mocktails, Marriage Hall, Guest House, and Children's Park facilities in Belari, West Bengal.",
+                footerLinksHeader: "Quick Links",
+                footerMenu: "Restaurant Menu",
+                footerContactHeader: "Direct Contact",
+                footerLoc: "Belari, West Bengal",
+                copyText: "&copy; 2026 Star M Plaza Cafe and Restaurant (Belari, WB). All rights reserved.",
+                footerDesign: "Designed for Local Hospitality"
+            }
+        };
+
+        let currentLang = 'bn';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'bn' ? 'en' : 'bn';
+            document.documentElement.lang = currentLang;
+            
+            const langBtn = document.getElementById('langSwitchBtn');
+            langBtn.textContent = currentLang === 'bn' ? 'English' : 'বাংলা';
+
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+
+        function filterMenu(category, btnElement) {
+            const cards = document.querySelectorAll('.menu-item-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
