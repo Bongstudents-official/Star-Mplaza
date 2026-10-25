@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star M Plaza Cafe and Restaurant | Belari, West Bengal</title>
-    <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, and Noto Sans Bengali -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-cream: #000000;
-            --bg-cream-card: #645539;
-            --forest-green: #1B3B2B;
-            --forest-green-dark: #12281D;
-            --gold-accent: #C5A059;
-            --gold-light: #DFC288;
-            --text-dark: #2C2C2C;
-            --text-muted: #666666;
-            --white: #ffffff;
+            --bg-dark: #121212;
+            --bg-card: #1E1E1E;
+            --bg-card-alt: #252525;
+            --gold-accent: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-hover: #E6CA65;
+            --text-light: #F5F5F5;
+            --text-muted: #A0A0A0;
+            --white: #FFFFFF;
+            --border-gold: rgba(212, 175, 55, 0.25);
             --transition: all 0.3s ease;
         }
 
@@ -30,8 +31,8 @@
 
         body {
             font-family: 'Noto Sans Bengali', 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.6;
         }
 
@@ -39,15 +40,15 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: var(--gold-accent);
-            color: var(--forest-green-dark);
+            background: linear-gradient(135deg, var(--gold-accent), var(--gold-hover));
+            color: #000;
             padding: 8px 18px;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(214, 175, 55, 0.3);
             z-index: 1000;
         }
 
@@ -71,24 +72,25 @@
         }
 
         .btn-primary {
-            background-color: var(--forest-green);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--gold-accent), var(--gold-hover));
+            color: #000;
+            font-weight: 700;
         }
 
         .btn-primary:hover {
-            background-color: var(--gold-accent);
-            color: var(--forest-green-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 1.5px solid var(--forest-green);
-            color: var(--forest-green);
+            border: 1.5px solid var(--gold-accent);
+            color: var(--gold-accent);
         }
 
         .btn-outline:hover {
-            background-color: var(--forest-green);
-            color: var(--white);
+            background-color: var(--gold-accent);
+            color: #000;
         }
 
         .whatsapp-btn {
@@ -98,12 +100,13 @@
         .whatsapp-btn:hover {
             background-color: #1EBE5D;
             color: white;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
         }
 
         .lang-switch {
-            background: var(--bg-cream-card);
+            background: var(--bg-card);
             border: 1px solid var(--gold-accent);
-            color: var(--forest-green);
+            color: var(--gold-accent);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 13px;
@@ -112,18 +115,18 @@
             transition: var(--transition);
         }
         .lang-switch:hover {
-            background: var(--forest-green);
-            color: var(--white);
+            background: var(--gold-accent);
+            color: #000;
         }
 
         /* Header / Navbar */
         header {
-            background-color: var(--bg-cream);
+            background-color: #000000;
             padding: 14px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+            border-bottom: 1px solid var(--border-gold);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -135,9 +138,8 @@
             text-decoration: none;
         }
 
-        /* Actual Restaurant Logo Image Styling */
         .brand-logo-img {
-            height: 48px;
+            height: 52px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -152,15 +154,14 @@
 
         nav a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-light);
             font-size: 14px;
             font-weight: 500;
             transition: var(--transition);
         }
 
         nav a:hover, nav a.active {
-            color: var(--forest-green);
-            font-weight: 600;
+            color: var(--gold-accent);
         }
 
         .mobile-menu-toggle {
@@ -168,7 +169,7 @@
             background: none;
             border: none;
             font-size: 22px;
-            color: var(--forest-green);
+            color: var(--gold-accent);
             cursor: pointer;
         }
 
@@ -179,12 +180,12 @@
             grid-template-columns: 1.1fr 0.9fr;
             gap: 50px;
             align-items: center;
-            background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-cream-card) 100%);
+            background: radial-gradient(circle at top right, #221E14 0%, var(--bg-dark) 70%);
         }
 
         .hero-content h1 {
             font-size: 48px;
-            color: var(--forest-green);
+            color: var(--white);
             line-height: 1.2;
             margin-bottom: 20px;
         }
@@ -216,19 +217,20 @@
             height: 420px;
             object-fit: cover;
             border-radius: 16px;
-            box-shadow: 0 20px 30px rgba(27, 59, 43, 0.12);
-            border: 4px solid var(--white);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--gold-accent);
         }
 
         .floating-badge {
             position: absolute;
             bottom: -20px;
             left: -20px;
-            background: var(--white);
+            background: var(--bg-card);
             padding: 15px 25px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             border-left: 4px solid var(--gold-accent);
+            border-top: 1px solid var(--border-gold);
             display: flex;
             align-items: center;
             gap: 15px;
@@ -241,7 +243,7 @@
 
         .floating-badge h4 {
             font-size: 14px;
-            color: var(--forest-green);
+            color: var(--white);
         }
 
         .floating-badge p {
@@ -253,11 +255,11 @@
         /* Generic Sections */
         .section {
             padding: 90px 5%;
-            background-color: var(--white);
+            background-color: var(--bg-dark);
         }
 
         .section-alt {
-            background-color: var(--bg-cream-card);
+            background-color: var(--bg-card);
         }
 
         .section-header {
@@ -278,7 +280,7 @@
 
         .section-header h2 {
             font-size: 36px;
-            color: var(--forest-green);
+            color: var(--white);
             margin-bottom: 12px;
         }
 
@@ -299,9 +301,9 @@
         .filter-btn {
             padding: 8px 20px;
             border-radius: 30px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            background: var(--bg-cream);
-            color: var(--text-dark);
+            border: 1px solid var(--border-gold);
+            background: var(--bg-card);
+            color: var(--text-light);
             font-size: 13px;
             font-weight: 600;
             cursor: pointer;
@@ -309,9 +311,9 @@
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background-color: var(--forest-green);
-            color: var(--white);
-            border-color: var(--forest-green);
+            background: var(--gold-accent);
+            color: #000;
+            border-color: var(--gold-accent);
         }
 
         .menu-grid {
@@ -321,10 +323,10 @@
         }
 
         .menu-item-card {
-            background-color: var(--bg-cream);
+            background-color: var(--bg-card);
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--border-gold);
             display: flex;
             flex-direction: column;
             transition: var(--transition);
@@ -332,7 +334,8 @@
 
         .menu-item-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(27, 59, 43, 0.08);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-accent);
         }
 
         .menu-item-img {
@@ -351,8 +354,9 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: var(--forest-green);
-            color: var(--gold-light);
+            background-color: #000;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
             padding: 4px 12px;
             font-size: 11px;
             font-weight: 600;
@@ -375,7 +379,7 @@
 
         .menu-item-header h3 {
             font-size: 18px;
-            color: var(--forest-green);
+            color: var(--white);
         }
 
         .menu-price {
@@ -393,7 +397,7 @@
         }
 
         .menu-item-footer {
-            border-top: 1px solid rgba(0,0,0,0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 15px;
             display: flex;
             justify-content: space-between;
@@ -411,11 +415,11 @@
         }
 
         .facility-card {
-            background-color: var(--white);
+            background-color: var(--bg-card-alt);
             border-radius: 20px;
             overflow: hidden;
-            border: 1px solid rgba(197, 160, 89, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
         }
@@ -436,9 +440,10 @@
             position: absolute;
             bottom: 15px;
             left: 15px;
-            background: rgba(27, 59, 43, 0.85);
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid var(--gold-accent);
             backdrop-filter: blur(4px);
-            color: var(--gold-light);
+            color: var(--gold-accent);
             padding: 6px 14px;
             font-size: 11px;
             font-weight: 600;
@@ -455,7 +460,7 @@
 
         .facility-body h3 {
             font-size: 22px;
-            color: var(--forest-green);
+            color: var(--white);
             margin-bottom: 12px;
         }
 
@@ -475,7 +480,7 @@
 
         .facility-features-list li {
             font-size: 13px;
-            color: var(--text-dark);
+            color: var(--text-light);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -488,7 +493,7 @@
 
         .facility-footer {
             margin-top: auto;
-            border-top: 1px solid rgba(0,0,0,0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
             display: flex;
             align-items: center;
@@ -507,6 +512,7 @@
             border-radius: 12px;
             overflow: hidden;
             position: relative;
+            border: 1px solid var(--border-gold);
         }
 
         .gallery-item img {
@@ -525,16 +531,16 @@
             display: grid;
             grid-template-columns: 1fr 1.1fr;
             gap: 40px;
-            background-color: var(--white);
+            background-color: var(--bg-card);
             padding: 50px;
             border-radius: 24px;
-            border: 1px solid rgba(197, 160, 89, 0.2);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
         .contact-info h2 {
             font-size: 32px;
-            color: var(--forest-green);
+            color: var(--white);
             margin-bottom: 15px;
         }
 
@@ -553,20 +559,20 @@
         .contact-icon-box {
             width: 48px;
             height: 48px;
-            background-color: var(--bg-cream);
-            color: var(--forest-green);
+            background-color: var(--bg-card-alt);
+            color: var(--gold-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
             flex-shrink: 0;
-            border: 1px solid rgba(197, 160, 89, 0.2);
+            border: 1px solid var(--border-gold);
         }
 
         .contact-text-box h4 {
             font-size: 16px;
-            color: var(--forest-green);
+            color: var(--white);
             margin-bottom: 4px;
         }
 
@@ -584,7 +590,7 @@
         }
 
         .map-box {
-            background-color: var(--bg-cream-card);
+            background-color: var(--bg-card-alt);
             border-radius: 16px;
             display: flex;
             flex-direction: column;
@@ -592,8 +598,8 @@
             justify-content: center;
             text-align: center;
             padding: 40px;
-            border: 2px dashed rgba(197, 160, 89, 0.4);
-            color: var(--forest-green);
+            border: 2px dashed var(--border-gold);
+            color: var(--white);
         }
 
         .map-box i {
@@ -615,9 +621,10 @@
 
         /* Footer */
         footer {
-            background-color: var(--forest-green-dark);
-            color: var(--white);
+            background-color: #080808;
+            color: var(--text-light);
             padding: 70px 5% 30px 5%;
+            border-top: 1px solid var(--border-gold);
         }
 
         .footer-content {
@@ -630,7 +637,7 @@
         }
 
         .footer-brand p {
-            color: #AAAAAA;
+            color: var(--text-muted);
             font-size: 14px;
             margin-top: 15px;
             max-width: 320px;
@@ -638,7 +645,7 @@
 
         .footer-links h4, .footer-contact h4 {
             font-size: 16px;
-            color: var(--gold-light);
+            color: var(--gold-accent);
             margin-bottom: 20px;
             letter-spacing: 0.5px;
         }
@@ -651,19 +658,19 @@
         }
 
         .footer-links a {
-            color: #CCCCCC;
+            color: var(--text-muted);
             text-decoration: none;
             font-size: 14px;
             transition: var(--transition);
         }
 
         .footer-links a:hover {
-            color: var(--gold-light);
+            color: var(--gold-accent);
         }
 
         .footer-contact p {
             font-size: 13px;
-            color: #CCCCCC;
+            color: var(--text-muted);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -675,7 +682,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 13px;
-            color: #888888;
+            color: #666;
             flex-wrap: wrap;
             gap: 15px;
         }
@@ -707,10 +714,10 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: var(--bg-cream);
+                background: #000;
                 padding: 20px;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-                border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+                border-bottom: 1px solid var(--border-gold);
             }
             nav ul.show {
                 display: flex;
@@ -725,11 +732,10 @@
 
     <div class="demo-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-key="demoBadge">ডেমো ওয়েবসাইট কনসেপ্ট</span></div>
 
-    <!-- Header & Navigation with Actual Restaurant Logo Image -->
+    <!-- Header & Navigation -->
     <header>
         <a href="#" class="logo-area">
-            <!-- Replace 'logo.png' with your actual uploaded logo image file name -->
-            <img src="logo.png" alt="Star MPlaza Logo" class="brand-logo-img">
+            <img src="logo.png" alt="Star M Plaza Logo" class="brand-logo-img">
         </a>
         <nav>
             <ul id="navLinks">
@@ -1032,7 +1038,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="logo-area" style="margin-bottom: 12px;">
-                    <img src="logo.png" alt="Star M Plaza Logo" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+                    <img src="logo.png" alt="Star M Plaza Logo" class="brand-logo-img">
                 </div>
                 <p data-key="footerBrandDesc">পশ্চিমবঙ্গের বোলারীতে চাইনিজ, বিরিয়ানি, তন্দুরি, মকটেল, ম্যারেজ হল, গেস্ট হাউস এবং চিলড্রেন পার্ক পরিষেবা প্রদান করা হচ্ছে।</p>
             </div>
@@ -1094,16 +1100,16 @@
                 tagChef: "শেফ স্পেশাল",
                 tagFresh: "রিফ্রেশিং",
                 item1Title: "রয়্যাল দম বিরিয়ানি",
-                item1Desc: "দীর্ঘ দানার সুগন্ধযুক্ত বাসমতি চালে তৈরি নরম মাংস বা সবজির সুস্বাদু দম বিরিয়ানি.",
+                item1Desc: "দীর্ঘ দানার সুগন্ধযুক্ত বাসমতি চালে তৈরি নরম মাংস বা সবজির সুস্বাদু দম বিরিয়ানি।",
                 item1Cat: "বিরিয়ানি ও ভাত",
                 item2Title: "চাইনিজ ডেলিক্যাসি",
-                item2Desc: "হাক্কা নুডলস, ফ্রাইড রাইস এবং সুস্বাদু মাঞ্চুরিয়ান তাজা শাকসবজি ও সস দিয়ে তৈরি.",
+                item2Desc: "হাক্কা নুডলস, ফ্রাইড রাইস এবং সুস্বাদু মাঞ্চুরিয়ান তাজা শাকসবজি ও সস দিয়ে তৈরি।",
                 item2Cat: "চাইনিজ ক্যুইজিন",
                 item3Title: "স্মোকি তন্দুরি প্লাটার",
-                item3Desc: "টক দই ও মশলায় ম্যারিনেট করা এবং আমাদের ঐতিহ্যবাহী মাটির ওভেনে নিখুঁতভাবে পোড়ানো.",
+                item3Desc: "টক দই ও মশলায় ম্যারিনেট করা এবং আমাদের ঐতিহ্যবাহী মাটির ওভেনে নিখুঁতভাবে পোড়ানো।",
                 item3Cat: "তন্দুর ও স্টার্টার",
                 item4Title: "কফি ও মকটেল",
-                item4Desc: "মনোরম ঠান্ডা পানীয়, ফলের জুস এবং সদ্য প্রস্তুত করা সুগন্ধযুক্ত কফি.",
+                item4Desc: "মনোরম ঠান্ডা পানীয়, ফলের জুস এবং সদ্য প্রস্তুত করা সুগন্ধযুক্ত কফি।",
                 item4Cat: "ক্যাফে ও পানীয়",
                 menuCallBtn: "আজকের স্পেশাল ও দাম জানতে কল করুন",
                 facSubHeader: "সম্পূর্ণ আতিথেয়তা",
